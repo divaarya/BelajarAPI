@@ -1,6 +1,7 @@
 package com.example.belajarapi;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TeamAdapter adapter;
     private List<Team> teamList = new ArrayList<>();
 
-    ProgressBar pbLoding;
+    private ProgressBar pbLoding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         String url = getIntent().getStringExtra("LEAGUE_URL");
+
+        Log.d("DEBUG_URL", "URL dari Intent: " + url);
+        Toast.makeText(this, "URL: " + url, Toast.LENGTH_SHORT).show();
         TeamApi api = ApiClient.getClient().create(TeamApi.class);
         //api.getAllTeams("English Premier League").enqueue(new Callback<TeamResponse>() {
         api.getTeamsFromUrl(url).enqueue(new Callback<TeamResponse>(){
