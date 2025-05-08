@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuUtama">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="insert text"
+        android:layout_gravity="center"
+        android:textSize="128px"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnPremier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="premiere"
+            android:layout_marginLeft="20dp"
+            android:textSize="64px"
+            />
+
+        <Button
+            android:id="@+id/btnLaLiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="la liga"
+            android:layout_marginLeft="30dp"
+            android:textSize="64px"
+            />
+    </LinearLayout>
+
+</LinearLayout>
